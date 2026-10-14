@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="512" height="512" role="img" aria-label="Coin Merge">
+  <defs>
+    <!-- metallic gold and silver, lit from the top left -->
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF3B0"/>
+      <stop offset="0.28" stop-color="#E9C860"/>
+      <stop offset="0.55" stop-color="#C9A13A"/>
+      <stop offset="0.78" stop-color="#9C7420"/>
+      <stop offset="1" stop-color="#E2BD55"/>
+    </linearGradient>
+    <linearGradient id="silver" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.3" stop-color="#DDE2E7"/>
+      <stop offset="0.58" stop-color="#AEB6BE"/>
+      <stop offset="0.8" stop-color="#7E878F"/>
+      <stop offset="1" stop-color="#D3D9DF"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E9C860"/>
+      <stop offset="0.5" stop-color="#C0C7CE"/>
+      <stop offset="1" stop-color="#9C7420"/>
+    </linearGradient>
+    <radialGradient id="sheen" cx="0.35" cy="0.3" r="0.75">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.35"/>
+      <stop offset="0.6" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="emboss" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="1.2" stdDeviation="1" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- coin rim -->
+  <circle cx="120" cy="120" r="114" fill="url(#rim)"/>
+  <circle cx="120" cy="120" r="106" fill="#1B2433"/>
+
+  <!-- yin-yang: silver base, gold teardrop (right half + lower bulge − upper bulge) -->
+  <circle cx="120" cy="120" r="100" fill="url(#silver)"/>
+  <path d="M120 20 A100 100 0 0 1 120 220 A50 50 0 0 1 120 120 A50 50 0 0 0 120 20 Z" fill="url(#gold)"/>
+  <circle cx="120" cy="120" r="100" fill="url(#sheen)"/>
+
+  <!-- the "eyes" are the letters: a gold C in the silver head, a silver M in the gold head -->
+  <g filter="url(#emboss)" font-family="Georgia, 'Times New Roman', serif" font-weight="700" text-anchor="middle">
+    <text x="120" y="86" font-size="46" fill="url(#gold)" stroke="#7A5A14" stroke-width="0.8">C</text>
+    <text x="120" y="186" font-size="42" fill="url(#silver)" stroke="#5E666E" stroke-width="0.8">M</text>
+  </g>
+
+  <!-- fine separation lines for a minted look -->
+  <circle cx="120" cy="120" r="100" fill="none" stroke="#1B2433" stroke-opacity="0.35" stroke-width="1"/>
+  <path d="M120 20 A50 50 0 0 1 120 120 A50 50 0 0 0 120 220" fill="none" stroke="#1B2433" stroke-opacity="0.25" stroke-width="1"/>
+</svg>
